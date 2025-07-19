@@ -55,16 +55,30 @@ const HeroSection = () => {
                     </Link>
                 </div>
 
-                <div className="hero-image-wrapper mt-5 md:mt-0">
-                    <div ref={imageRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-screen-2xl h-32 bg-primary/20 -z-10 rounded-full blur-3xl" />
-                    <Image
-                        src={"/banner.jpeg"}
-                        width={1200}
-                        height={720}
-                        alt="dashboard Preview"
-                        className="rounded-xl shadow-2xl ring-1 ring-foreground/10"
-                    />
-                </div>
+               <div className="hero-image-wrapper mt-10 md:mt-0 relative flex items-center justify-center">
+  {/* Background glow */}
+  <div
+    ref={imageRef}
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-28 bg-primary/20 -z-10 rounded-full blur-5xl"
+  />
+
+  {/* Image with clean border and shadow */}
+  <div className="relative rounded-2xl shadow-xl ring-1 ring-gray-300">
+    <Image
+      src="/banner.jpeg"
+      width={1300}
+      height={30}
+      alt="Dashboard Preview"
+      className="rounded-2xl object-cover"
+    />
+  </div>
+</div>
+
+
+
+
+
+
             </div>
         </section>
     )
